@@ -6,6 +6,7 @@ class DhanClientWrapper:
 
     def get_ltp(self, exchange, security_id):
         # Get last traded price from Dhan's OHLC API
+        print("get_ltp called with:", exchange, security_id)
         resp = self.client.ohlc_data({exchange: [security_id]})
         print(f"Raw LTP response: {resp}")  # Log raw response
         if exchange in resp and security_id in resp[exchange]:
@@ -25,4 +26,5 @@ class DhanClientWrapper:
             product_type=product_type,
             price=price
         )
+
 
