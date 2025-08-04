@@ -1,0 +1,5 @@
+dhanhq
+pandas
+streamlit
+requests
+python-dotenv
